@@ -1,10 +1,5 @@
+import { IUserBody } from '../types/User'
 import api from './api'
-
-interface IUserBody {
-  locations: { lat: string; lng: string }[]
-  name: string
-  email: string
-}
 
 export const apiGetUsers = () => api.get('/user')
 

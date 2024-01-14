@@ -1,15 +1,5 @@
+import { ILoginBody, IRegisterBody } from '../types/Auth'
 import api from './api'
-
-interface IRegisterBody {
-  email: string
-  password: string
-  name: string
-}
-
-interface ILoginBody {
-  email: string
-  password: string
-}
 
 export const apiRegister = (body: IRegisterBody) => api.post('/register', body)
 

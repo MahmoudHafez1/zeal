@@ -8,9 +8,7 @@ const axiosInstance = axios.create({
 })
 
 export const setJWT = (token: String | null) => {
-  axiosInstance.defaults.headers.common['Authorization'] = token
-    ? `${token}`
-    : null
+  axiosInstance.defaults.headers.common['token'] = token ? `${token}` : null
 }
 
 const api = {
